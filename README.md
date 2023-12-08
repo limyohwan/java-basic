@@ -61,3 +61,19 @@
   - b
   - c
 - a, a.b, a.c 패키지는 각각 다른 패키지이며 import해서 사용해야함
+
+## 접근 제어자
+
+### 접근 제어자 종류
+- private = 모든 외부 호출 막음(클래스내에서만 사용)
+- default(package-private) = 같은 패키지 안에서만 허용
+- protected = 같은 패키지 안에서 호출 허용, 패키지가 달라도 상속 관계에서 호출 허용
+- public = 모든 외부 호출 허용
+- private -> default -> protected -> public
+
+### 사용 위치
+- 클래스에는 일부 사용 (public, default)
+  - public class는 반드시 파일명과 이름이 같아야함
+  - 하나의 자바파일에 public class는 하나만 등장 가능
+  - 하나의 자바파일에 default 접근자를 사용하는 클래스는 무한정 만들 수 있음
+- 필드, 생성자. 메서드
